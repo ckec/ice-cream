@@ -28,9 +28,15 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              }
             ],
             "styles": [
+              "src/theme.less",
               "src/styles.scss"
             ],
             "scripts": []
@@ -95,15 +101,27 @@
             ]
           }
         },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/wish"],
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
+            "jestConfig": "jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "e2e": {
+          "root": "e2e",
+          "sourceRoot": "e2e/src",
+          "projectType": "application",
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "e2e/cypress.json",
+            "tsConfig": "e2e/tsconfig.e2e.json",
             "devServerTarget": "wish:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "wish:serve:production"
+              "devServerTarget": "wish:serve"
             }
           }
         }
