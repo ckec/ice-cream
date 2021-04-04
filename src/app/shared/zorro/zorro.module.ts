@@ -6,19 +6,9 @@ import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { fr_FR } from 'ng-zorro-antd/i18n';
 import { NZ_ICONS, NzIconModule } from 'ng-zorro-antd/icon';
 
-import {
-  MenuFoldOutline,
-  MenuUnfoldOutline,
-  FormOutline,
-  DashboardOutline,
-} from '@ant-design/icons-angular/icons';
+import { MenuFoldOutline, MenuUnfoldOutline, FormOutline, DashboardOutline } from '@ant-design/icons-angular/icons';
 
-const icons = [
-  MenuFoldOutline,
-  MenuUnfoldOutline,
-  DashboardOutline,
-  FormOutline,
-];
+const icons = [MenuFoldOutline, MenuUnfoldOutline, DashboardOutline, FormOutline];
 const componentsModules = [NzLayoutModule, NzMenuModule];
 
 @NgModule({
