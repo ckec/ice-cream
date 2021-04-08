@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wish": {
+    "ice-cream": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/wish",
+            "outputPath": "dist/ice-cream",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "wish:build"
+            "browserTarget": "ice-cream:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "wish:build:production"
+              "browserTarget": "ice-cream:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "wish:build"
+            "browserTarget": "ice-cream:build"
           }
         },
         "lint": {
@@ -94,7 +94,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/wish"],
+          "outputs": ["coverage/ice-cream"],
           "options": {
             "jestConfig": "jest.config.js",
             "passWithNoTests": true
@@ -108,16 +108,16 @@
           "options": {
             "cypressConfig": "e2e/cypress.json",
             "tsConfig": "e2e/tsconfig.e2e.json",
-            "devServerTarget": "wish:serve"
+            "devServerTarget": "ice-cream:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "wish:serve"
+              "devServerTarget": "ice-cream:serve"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "wish"
+  "defaultProject": "ice-cream"
 }

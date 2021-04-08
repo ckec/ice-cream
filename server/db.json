@@ -1,9 +1,7 @@
 {
-  "wishes": [
+  "ice-creams": [
     {
-      "id": "1",
-      "title": "Macbook pro",
-      "description": "Macbook pro"
+      "id": "1"
     }
   ]
 }

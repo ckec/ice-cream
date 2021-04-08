@@ -5,5 +5,5 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/src/test.ts'],
   collectCoverage: true,
   coverageReporters: ['json', 'html', 'lcov'],
-  coverageDirectory: 'coverage/wish',
+  coverageDirectory: 'coverage/ice-cream',
 };
