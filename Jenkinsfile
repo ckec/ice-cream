@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        docker 'node:lts-alpine3.10'
+        docker {
+          image 'node:lts-alpine3.10'
+          args '-u root --privileged'
+        }
     }
     stages {
         stage('Install packages') {
