@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
           image 'node:lts-alpine3.10'
-          args '-u root --privileged -v'
+            args '-u root -v /var/run/docker.sock:/var/run/docker.sock --entrypoint=\'\''
         }
     }
     stages {
