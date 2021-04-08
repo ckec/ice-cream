@@ -10,17 +10,36 @@
   >
     <div class="sidebar-logo">
       <a href="" target="_blank">
-        <!--        <img src="" alt="logo" />-->
-        <h1>{{ title }}</h1>
+        <h1><span id="logo" class="icon-ice-cream-1"></span>{{ title }}</h1>
       </a>
     </div>
     <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li nz-submenu nzOpen nzTitle="Dashboard" nzIcon="dashboard">
+      <li nz-menu-item nz-tooltip nzTooltipPlacement="right">
+        <i nz-icon nzType="dashboard"></i>
+        <span>Dashboard</span>
+      </li>
+      <li nz-submenu nzTitle="Ice-cream">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">Hello</a>
+            <a routerLink="/"><span class="icon-ice-cream-4"></span>Cone</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/"><span class="icon-ice-cream-13"></span>Stick</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/"><span class="icon-ice-cream-1"></span>Scoop</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/"><span class="icon-ice-cream-21"></span>Soft Serve</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/"><span class="icon-ice-cream-10"></span>Bar</a>
           </li>
         </ul>
+      </li>
+      <li nz-menu-item nz-tooltip nzTooltipPlacement="right">
+        <i nz-icon nzType="setting"></i>
+        <span>Settings</span>
       </li>
     </ul>
   </nz-sider>
