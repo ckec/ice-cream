@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
           image 'node:lts-alpine3.10'
-          args '-u root --privileged'
+          args '-u root --privileged -v'
         }
     }
     stages {
