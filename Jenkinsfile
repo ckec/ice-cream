@@ -7,7 +7,7 @@ pipeline {
     }
     stages {
         stage('Build'){
-            steps { sh 'npm ci'}
+            steps { sh 'yarn'}
         }
         stage('Unit Tests'){
             steps { sh 'npm run test'}
