@@ -1,5 +1,10 @@
 version: '3.8'
 
+x-healthcheck-defaults: &app-healthchecks
+  interval: 30s
+  timeout: 10s
+  retries: 3
+
 services:
   ice-cream:
     build:
@@ -9,3 +14,6 @@ services:
     command: /bin/sh -c 'npm run serve:web'
     ports:
       - '4200:4200'
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:4200']
+      <<: *app-healthchecks
