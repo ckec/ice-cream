@@ -7,7 +7,7 @@ pipeline {
     }
     stages {
         stage('Install dependencies'){
-            steps { sh 'yarn install'}
+            steps { sh 'npm ci'}
         }
         stage ('Tests / Quality / Format'){
               parallel{
