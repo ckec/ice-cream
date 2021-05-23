@@ -6,14 +6,18 @@ pipeline {
         }
     }
     stages {
-        stage('Build'){
-            steps { sh 'yarn'}
+        stage('Install dependencies'){
+            steps { sh 'yarn install'}
         }
-        stage('Unit Tests'){
-            steps { sh 'npm run test'}
+        stage ('Tests / Quality / Format'){
+              parallel{
+                       stage('Unit Tests'){steps { sh 'npm run test'}}
+                       stage('E2E Tests'){steps { sh 'npm run e2e'}}
+                       stage('Lint'){steps { sh 'npm run lint'}}
+                       stage('prettier'){steps { sh 'npm run format:check'}}
+              }
         }
-        stage('E2E Tests'){
-            steps { sh 'npm run e2e'}
-        }
+        stage('Build'){steps { sh 'npm run build:prod'}}
+        stage('Deploy'){steps { sh 'npm run e2e'}}
     }
 }
