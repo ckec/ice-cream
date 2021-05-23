@@ -11,10 +11,10 @@ pipeline {
         }
         stage ('Tests / Quality / Format'){
               parallel{
+                       stage('prettier'){steps { sh 'npm run format:check .'}}
+                       stage('Lint'){steps { sh 'npm run lint'}}
                        stage('Unit Tests'){steps { sh 'npm run test'}}
                        stage('E2E Tests'){steps { sh 'npm run e2e'}}
-                       stage('Lint'){steps { sh 'npm run lint'}}
-                       stage('prettier'){steps { sh 'npm run format:check'}}
               }
         }
         stage('Build'){steps { sh 'npm run build:prod'}}
