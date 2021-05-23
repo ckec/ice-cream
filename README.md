@@ -10,3 +10,7 @@
 docker-compose build --no-cache
 docker-compose up -d
 ```
+
+# Open in browser
+
+[Ice-Cream](http://localhost:3300/)
