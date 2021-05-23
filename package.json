@@ -13,7 +13,7 @@
     "format": "prettier --write",
     "format:check": "prettier --check",
     "test:coverage": "jest --coverage",
-    "e2e": "concurrently \"cypress run\" --kill-others \"ng serve --port 4300\" --success first ",
+    "e2e": "ng e2e",
     "build:doc": "compodoc -p tsconfig.json -d dist/apps/documentation/compodoc --theme vagrant",
     "serve:doc": "compodoc -p tsconfig.json -d dist/apps/documentation/compodoc --theme vagrant -s",
     "serve:json": "json-server server/db.json",
