@@ -18,6 +18,6 @@ pipeline {
               }
         }
         stage('Build'){steps { sh 'npm run build:prod'}}
-        stage('Deploy'){steps { sh 'npm run e2e'}}
+//         stage('Deploy'){steps { sh 'npm run e2e'}}
     }
 }
