@@ -6,14 +6,13 @@ import { registerLocaleData } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ZorroModule } from './shared/zorro/zorro.module';
-
 import fr from '@angular/common/locales/fr';
+import { MaterialModule } from './shared/material';
 registerLocaleData(fr);
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule, ZorroModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, BrowserAnimationsModule, MaterialModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
