@@ -52,7 +52,8 @@ import { CdkTableModule } from '@angular/cdk/table';
 import { TextFieldModule } from '@angular/cdk/text-field';
 import { CdkTreeModule } from '@angular/cdk/tree';
 
-const modules = [
+const modulesComponents = [
+  A11yModule,
   MatAutocompleteModule,
   MatBadgeModule,
   MatBottomSheetModule,
@@ -100,11 +101,12 @@ const modules = [
   CdkStepperModule,
   CdkTableModule,
   TextFieldModule,
-  CdkTreeModule,
+  CdkTreeModule
 ];
 
 @NgModule({
-  imports: modules,
-  exports: modules,
+  imports: modulesComponents,
+  exports: modulesComponents
 })
-export class MaterialModule {}
+export class MaterialModule {
+}
