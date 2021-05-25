@@ -101,12 +101,11 @@ const modulesComponents = [
   CdkStepperModule,
   CdkTableModule,
   TextFieldModule,
-  CdkTreeModule
+  CdkTreeModule,
 ];
 
 @NgModule({
   imports: modulesComponents,
-  exports: modulesComponents
+  exports: modulesComponents,
 })
-export class MaterialModule {
-}
+export class MaterialModule {}
