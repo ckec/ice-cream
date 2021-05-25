@@ -1,61 +1,35 @@
-<nz-layout class="app-layout">
-  <!-- Sider Menu-->
-  <nz-sider
-    class="menu-sidebar"
-    nzCollapsible
-    nzWidth="256px"
-    nzBreakpoint="md"
-    [(nzCollapsed)]="isCollapsed"
-    [nzTrigger]="null"
-  >
-    <div class="sidebar-logo">
-      <a href="" target="_blank">
-        <h1><span id="logo" class="icon-ice-cream-1"></span>{{ title }}</h1>
-      </a>
-    </div>
-    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
-      <li nz-menu-item nz-tooltip nzTooltipPlacement="right">
-        <i nz-icon nzType="dashboard"></i>
-        <span>Dashboard</span>
+<mat-toolbar>
+  <a>
+    <h1><span id="logo" class="icon-ice-cream-1"></span>{{ title }}</h1>
+  </a>
+</mat-toolbar>
+<mat-drawer-container class="container">
+  <mat-drawer mode="side" opened>
+    <ul>
+      <li>
+        <a mat-button routerLink="/"><span class="icon-ice-cream-4"></span>Dashboard</a>
       </li>
-      <li class="ice-cream-menu" nz-submenu nzTitle="Ice-cream" nzIcon="appstore">
-        <ul>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/"><span class="icon-ice-cream-4"></span>Cone</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/"><span class="icon-ice-cream-13"></span>Stick</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/"><span class="icon-ice-cream-1"></span>Scoop</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/"><span class="icon-ice-cream-21"></span>Soft Serve</a>
-          </li>
-          <li nz-menu-item nzMatchRouter>
-            <a routerLink="/"><span class="icon-ice-cream-10"></span>Bar</a>
-          </li>
-        </ul>
+      <li>
+        <a mat-button routerLink="/"> <span class="icon-ice-cream-4"></span>Cone</a>
       </li>
-      <li nz-menu-item nz-tooltip nzTooltipPlacement="right">
-        <i nz-icon nzType="setting"></i>
-        <span>Settings</span>
+      <li>
+        <a mat-button routerLink="/"> <span class="icon-ice-cream-13"></span>Stick</a>
+      </li>
+      <li>
+        <a mat-button routerLink="/"> <span class="icon-ice-cream-1"></span>Scoop</a>
+      </li>
+      <li>
+        <a mat-button routerLink="/"> <span class="icon-ice-cream-21"></span>Soft Serve</a>
+      </li>
+      <li>
+        <a mat-button routerLink="/"> <span class="icon-ice-cream-10"></span>Bar</a>
+      </li>
+      <li>
+        <a mat-button routerLink="/"> <span class="icon-ice-cream-10"></span>Settings</a>
       </li>
     </ul>
-  </nz-sider>
-  <!-- Layout -->
-  <nz-layout>
-    <nz-header>
-      <div class="app-header">
-        <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-          <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
-        </span>
-      </div>
-    </nz-header>
-    <nz-content>
-      <div class="inner-content">
-        <router-outlet></router-outlet>
-      </div>
-    </nz-content>
-  </nz-layout>
-</nz-layout>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
