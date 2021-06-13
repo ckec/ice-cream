@@ -13,7 +13,7 @@ services:
       - ./src:/app/src
     command: /bin/sh -c 'npm run serve:web'
     ports:
-      - '3300:4200'
+      - '3200:4200'
     healthcheck:
       test: ['CMD', 'curl', '-f', 'http://localhost:4200']
       <<: *app-healthchecks
