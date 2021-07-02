@@ -13,4 +13,4 @@ docker-compose up -d
 
 # Open in browser
 
-[Ice-Cream](http://localhost:3300/)
+[Ice-Cream](http://localhost:3200/)
